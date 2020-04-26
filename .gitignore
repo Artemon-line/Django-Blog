@@ -3,6 +3,7 @@ node_modules/
 *.pyc
 __ pycache __
 /static
+venv/
 .DS_Store
 # Django stuff:
 *.log

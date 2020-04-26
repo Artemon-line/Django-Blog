@@ -5,7 +5,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <h1>Django Blog</h1>
+                <h1>Django Blog #1</h1>
             </div>
         );
     }
