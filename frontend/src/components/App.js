@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 class App extends Component {
     render() {
         return (
-            <div>
-                <h1>Django Blog #1</h1>
+            <div style={{borderStyle: 'ridge', borderRadius: '5px'}}>
+                <h1>React App: Django Blog #112s</h1>
             </div>
         );
     }

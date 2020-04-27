@@ -1,3 +1,10 @@
 {
-    "python.pythonPath": "~/Environments/django_blog/bin/python3"
+    "python.pythonPath": "venv\\Scripts\\python.exe",
+    "files.associations": {
+        "**/*.html": "html",
+        "**/templates/**/*.html": "django-html",
+        "**/templates/**/base.html": "html",
+        "**/templates/**/*": "django-txt",
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+    },
 }
