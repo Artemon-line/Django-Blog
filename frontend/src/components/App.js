@@ -1,14 +1,20 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
 
+import Header from './layout/Header';
+import Dashboard from './posts/Dashboard';
+
 class App extends Component {
-    render() {
-        return (
-            <div style={{borderStyle: 'ridge', borderRadius: '5px'}}>
-                <h1>React App: Django Blog #112s</h1>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <Fragment>
+        <Header />
+        <div className="container">
+          <Dashboard />
+        </div>
+      </Fragment>
+    );
+  }
 }
 
-ReactDOM.render(<App />, document.querySelector("#app"));
+ReactDOM.render(<App />, document.getElementById('app'));
