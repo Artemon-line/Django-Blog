@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "venv\\Scripts\\python.exe",
+    "python.pythonPath": "venv/bin/python3",
     "files.associations": {
         "**/*.html": "html",
         "**/templates/frontend/*.html": "html",

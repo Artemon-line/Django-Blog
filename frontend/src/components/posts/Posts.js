@@ -1,11 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { getPosts } from '../../actions/posts';
+import posts from '../../reducers/posts';
 
-export default class Posts extends Component {
+export class Posts extends Component {
+
+  static propTypes = {
+    posts: PropTypes.array.isRequired
+  }
+
+  componentDidMount(){
+    this.props.getPosts();
+  }
+
   render() {
     return (
-      <div>
+      <Fragment>
         <h1>Posts list</h1>
-      </div>
+      </Fragment>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  posts: state.posts.post
+})
+
+export default connect(mapStateToProps, { getPosts })(Posts);
