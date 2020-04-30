@@ -48,6 +48,10 @@ REST_FRAMEWORK = {  # added
         'rest_framework.permissions.AllowAny'
     ],
     'DATETIME_FORMAT': "%m/%d/%Y %H:%M:%S",
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ]
 }
 
 MIDDLEWARE = [
