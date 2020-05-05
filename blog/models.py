@@ -18,3 +18,6 @@ class Stats(models.Model):
     users = models.IntegerField
     comments = models.IntegerField
     likes = models.IntegerField
+
+    def __str__(self):
+        return self.posts

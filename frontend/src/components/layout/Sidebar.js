@@ -6,7 +6,7 @@ import stats from '../../reducers/stats';
 
 export class Sidebar extends Component {
   static propTypes = {
-    stats: PropTypes.array.isRequired,
+    stats: PropTypes.object.isRequired,
   };
 
   componentDidMount() {
@@ -23,7 +23,9 @@ export class Sidebar extends Component {
         <ul className="list-group">
           <li className="list-group-item d-flex justify-content-between align-items-cente">
             Posts
-            <span className="badge badge-primary badge-pill">14</span>
+            <span className="badge badge-primary badge-pill">
+              {/* {this.props.stats} */}
+            </span>
           </li>
           <li className="list-group-item d-flex justify-content-between align-items-cente">
             Users

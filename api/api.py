@@ -4,6 +4,8 @@ from rest_framework import viewsets, permissions, response
 from rest_framework.renderers import JSONRenderer
 from .serializers import PostSerializer
 from rest_framework.views import APIView
+from django.contrib.auth.models import User
+
 
 # Post Viewset
 
@@ -17,15 +19,13 @@ class PostViewSet(viewsets.ModelViewSet):
     serializer_class = PostSerializer
 
 
-class PostsStatsViewSet(APIView):
+class PostsStatsView(APIView):
     """
     A view that returns the count of active posts.
     """
-    serializer_class = [JSONRenderer]
-
-    def get(self, request, format=None):
+    def get(self, request):
         posts = Post.objects.count()
-        users = 0
+        users = User.objects.count()
         comments = 0
         likes = 0
         content = {'posts': posts, 'users': users,
