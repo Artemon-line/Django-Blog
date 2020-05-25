@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 
 class Post(models.Model):
+    id = models.IntegerField(primary_key=True)
     title = models.CharField(max_length=20)
     author = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     content = models.CharField(max_length=255)
