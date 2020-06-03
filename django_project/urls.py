@@ -21,6 +21,5 @@ urlpatterns = [
     path('react/', include('frontend.urls')),
     path('admin/', admin.site.urls),
     path('register/', user_views.register, name='register'),
-    path('api/', include('api.urls')),
     path('', include('blog.urls')),
 ]

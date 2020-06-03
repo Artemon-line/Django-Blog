@@ -45,15 +45,19 @@
     <main role="main" class="container">
         <div class="row">
             <div class="col-md-8">
+            aa
                 {% if messages %}
-                {% for message in messages %}
-                <div class="alert alert-{{message.tags}}">
-                    {{ message }}
-                </div>
-                {% endfor %}
+                ccc
+                <div class="alert alert-primary" role="alert">
+                        This is a primary alert—check it out!
+                        </div>
+                    {% comment %} {% for message in messages %}
+                        <div class="alert alert-primary" role="alert">
+                        This is a primary alert—check it out!
+                        </div>
+                     {% endfor %} {% endcomment %}
                 {% endif %}
-                {% block content %}
-                {% endblock %}
+                {% block content %}{% endblock %}
             </div>
             <div class="col-md-4">
                 <div class="content-section">
