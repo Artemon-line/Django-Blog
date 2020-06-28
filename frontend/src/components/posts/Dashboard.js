@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import Form from './Form';
 import Posts from './Posts';
 import Sidebar from '../layout/Sidebar';
 
